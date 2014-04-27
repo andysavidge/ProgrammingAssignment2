@@ -1,7 +1,7 @@
 ## These functions create a special "matrix" object that can solve(if needed), cache, and get cached 
 ## matrix inverses.
 ## Two functions below use [r] scoping rules to assign a matrix inverse solution using 
-## the <<- operator to cache the solution
+## the <<- operator to implement state preservation in R objects.
 
 # makeCacheMatrix takes an argument x of a "matrix" object and then returns
 # a list with 4 list items that are callable functions as follows:
@@ -82,38 +82,3 @@ cacheSolve <- function(x, ...) {
 #b <- makeCacheMatrix(a)
 #cacheSolve(b)
 #cacheSolve(b)
-
-#GRADING
-#Was a valid GitHub URL containing a git repository submitted?
-#0 points: A valid GitHub URL was NOT submitted (or URL is broken)
-#x1 point: The submitted URL points to a GitHub repository
-#Does the GitHub repository contain at least one commit beyond the original fork?
-#0 points: No, there are no commits beyond the original fork
-#x1 point: Yes, there is at least one commit beyond the original fork
-#Does the GitHub repository contain an R file containing code implementing the completed assignment? 
-#NOTE: There is no need to run the code here, but rather you should visually inspect the R file in the GitHub repository and check to see that there is code there beyond the original stub that was committed there by the instructor. Do not attempt to judge whether the code is correct or not.
-#0 points: No, the R file does not contain any code implementing the completed assignment
-#1 point: The R file contains code implementing a partially completed assignment
-#?completed?x2 points: The R file contains code implementing the complete assignment
-#Does the R file containing the code have any comments explaining what the code does?
-#NOTE: The makeCacheMatrix and cacheSolve functions should both be documented with explanatory comments. There maybe other functions in the R file but they do not need to be commented.
-#0 points: There are no explanatory comments in the R file
-#1 points: One of the functions has some corresponding explanatory comments in the R file
-#x2 points: Both functions have corresponding explanatory comments in the R file
-#Does the R code implementing the 'makeCacheMatrix' function appear to be correct, to the best of your ability to judge?
-#NOTE: Do not run the R code on your own computer. Please examine the R code and determine to the best of 
-#your ability, whether the solution presented appears to match the requirements of the assignment. 
-#A correct solution (as best you can determine) gets 1 point and a solution that is well-written and 
-#easy to read gets an additional 1 point.
-#0 points: The solution contains at least one identifiable problem
-#x1 point: The solution appears to be correct
-#?x2 points: The solution appears to be correct and is written in a well-formatted and easily readable style
-#Does the R code implementing the 'cacheSolve' function appear to be correct, to the best of your ability 
-#to judge?
-#NOTE: Do not run the R code on your own computer. Please examine the R code and determine to the best of your 
-#ability, whether the solution presented appears to match the requirements of the assignment. 
-#A correct solution (as best you can determine) gets 1 point and a solution that is well-written and 
-#easy to read gets an additional 1 point.
-#0 points: The solution contains at least one identifiable problem
-#x1 point: The solution appears to be correct
-#?x2 points: The solution appears to be correct and is written in a well-formatted and easily readable style
