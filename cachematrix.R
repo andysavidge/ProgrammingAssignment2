@@ -11,30 +11,32 @@
 ## getInverse <- function() {m}                 ## get the value of the solve or inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-      if(det(x) == 0) {                                           ## check for OK 'invertible' input matrix
-            message("matrix is 'Singular' and cannot be inverted")
-      }
-      if(nrow(x) != ncol(x)){                                     ## check for OK 'square' input matrix
-            message("matrix is not 'Square' and does not have an inverse")
-      }
+      ## input checking commented out due:
+      ## "For this assignment, assume that the matrix supplied is always invertible."
+      ## if(det(x) == 0) {                                           ## check for OK 'invertible' input matrix
+      ##       message("matrix is 'Singular' and cannot be inverted")
+      ## }
+      ## if(nrow(x) != ncol(x)){                                     ## check for OK 'square' input matrix
+      ##       message("matrix is not 'Square' and does not have an inverse")
+      ## }
       m <- NULL
       set <- function(y) {                                        ## function to set to a "cache" 
-            message("in function CacheMatrix sub-function set()")
+            message("in function set()")
             x <<- y
             m <<- NULL
       }
       get <- function() {                                         ## function to get matrix being solved
-            message("in function CacheMatrix sub-function get()")
+            message("in function get()")
             x
       }
       
       setInverse <- function(solve) {                             ## saves solution to "cache" location
-            message("in function CacheMatrix sub-function setInverse()")
+            message("in function setInverse()")
             m <<- solve
       }
       
       getInverse <- function() {                                   ## returns cached solution object
-            message("in function CacheMatrix sub-function getInverse()")
+            message("in function getInverse()")
             m
       }
       
